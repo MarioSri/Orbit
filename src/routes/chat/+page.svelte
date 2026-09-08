@@ -19,7 +19,7 @@
   } from '@lucide/svelte';
 
   let inputVal = $state('');
-  let chatViewport: HTMLDivElement;
+  let chatViewport = $state<HTMLDivElement>();
 
   const suggestionPrompts = [
     "What is taking up the most space on my drive?",
