@@ -1,48 +1,38 @@
-<div align="center">
+# Orbit
 
-# 🪐 Orbit
+AI-Native Storage Intelligence and Disk Visualization for macOS and Windows.
 
-**Next-Generation AI-Native Storage Intelligence & Disk Visualization**
-
-[![Svelte 5](https://img.shields.io/badge/Svelte-5-FF3E00?style=flat-square&logo=svelte&logoColor=white)](https://svelte.dev)
-[![Tauri 2](https://img.shields.io/badge/Tauri-2.0-24C8D8?style=flat-square&logo=tauri&logoColor=white)](https://tauri.app)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Tailwind / CSS Tokens](https://img.shields.io/badge/Styling-Custom%20Tokens-06B6D4?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](./LICENSE)
-
-*Say goodbye to 20-year-old cluttered treemaps. Orbit provides a living, spatial galaxy view of your disk with on-device AI intelligence, swipe-triage decks, developer junk purgers, and a 30-day safety vault.*
+Orbit provides a spatial galaxy view of storage drives combined with an on-device AI assistant, swipe-triage decks for rapid file decisions, developer junk cleanup, and a 30-day safety vault.
 
 ---
 
-</div>
+## Key Features
 
-## 🚀 Key Features
-
-- 🌌 **Orbital Galaxy Visualization** — Dynamic solar system model where planets represent directories and moons represent files, scaled by size and color-coded by category.
-- 💬 **Local AI Storage Assistant** — Conversational file queries, growth explanations, and cleanup recommendations with 100% on-device privacy.
-- 🃏 **Swipe Triage Deck** — Rapid cleanup decisions on large files using an intuitive card deck with instant undo.
-- 🛠️ **Developer Junk Detector** — Detect and purge bloated `node_modules`, `target`, `.venv`, Xcode `DerivedData`, Docker images, and stale build caches.
-- 🛡️ **30-Day Safety Vault** — Soft deletion stage with one-click restoration, auto-expiration, and zero fear of accidental deletion.
-- 🔍 **Duplicate & Near-Duplicate Finder** — Perceptual image hashing, exact duplicate grouping, and smart keep-newest/keep-highest-res recommendations.
-- ⏳ **Timeline Scrubber & Growth Forecasts** — Historical disk snapshots, sudden spike diagnostics, and predictive runout estimations.
-- 📊 **Storage Wrapped & "Roast My Storage"** — Shareable visual audits highlighting digital hoarding habits and hoarding archetypes.
-- 🪟 **Menu Bar & Taskbar Compact Widget** — Lightweight real-time disk gauge, quick purge triggers, and disk health metrics.
+- **Orbital Galaxy Visualization**: Dynamic spatial model where directories and files are rendered in orbit, scaled by size and categorized by type.
+- **Local AI Storage Assistant**: Conversational file queries, disk growth explanations, and cleanup recommendations with local privacy.
+- **Swipe Triage Deck**: Rapid cleanup decisions on large files using an interactive card deck with instant undo.
+- **Developer Junk Detector**: Automated detection and cleanup for node_modules, build targets, virtual environments, Xcode DerivedData, Docker images, and stale caches.
+- **30-Day Safety Vault**: Staged soft deletion with one-click restoration, auto-expiration, and protection against accidental data loss.
+- **Duplicate Detection**: Perceptual image hashing and exact file matching with intelligent retention suggestions.
+- **Timeline Scrubber and Growth Forecasting**: Historical disk snapshots, spike diagnostics, and predictive capacity estimates.
+- **Storage Wrapped**: Visual storage audits and usage habit summaries.
+- **Menu Bar and Taskbar Widget**: Compact system tray widget with real-time disk gauges and quick purge actions.
 
 ---
 
-## 🏗️ Architecture & Tech Stack
+## Architecture and Tech Stack
 
 | Layer | Technology | Description |
 |---|---|---|
-| **Frontend UI** | SvelteKit + Svelte 5 (Runes) | Ultra-lightweight, 60fps animations, responsive desktop layout |
-| **Desktop Shell** | Tauri 2.0 (Rust) | Native performance, compact bundle size, secure IPC |
-| **Styling** | Custom Design Tokens & Glassmorphism | Dark aesthetic with vibrant accent hues and fluid micro-interactions |
-| **Icons** | Lucide Svelte | Sleek, consistent iconography |
-| **Cloud / Auth** | Supabase JS | Syncing Pro status and optional encrypted preference backups |
+| Frontend UI | SvelteKit + Svelte 5 (Runes) | High performance UI with smooth 60fps animations |
+| Desktop Shell | Tauri 2.0 (Rust) | Native cross-platform performance with secure IPC |
+| Styling | Design Tokens and CSS Variables | Structured dark theme with responsive layout |
+| Iconography | Lucide Svelte | Consistent interface icons |
+| Cloud and Auth | Supabase JS | Pro subscription verification and encrypted preference sync |
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Orbit/
@@ -55,56 +45,55 @@ Orbit/
 │   │   ├── store.ts         # Reactive state management (triage, vault, scan status)
 │   │   └── supabase.ts      # Supabase client integration
 │   └── routes/
-│       ├── +page.svelte     # Orbital Galaxy Overview & Dashboard
-│       ├── categories/      # Category breakdowns & drill-downs
+│       ├── +page.svelte     # Orbital Galaxy Overview and Dashboard
+│       ├── categories/      # Category breakdowns and drill-downs
 │       ├── chat/            # On-device AI Chat Assistant
-│       ├── devjunk/         # Developer junk & build artifacts purge
+│       ├── devjunk/         # Developer junk and build artifacts purge
 │       ├── duplicates/      # Perceptual duplicates finder
-│       ├── insights/        # Predictive analytics & storage alerts
-│       ├── onboarding/      # First-launch guided tour & permissions
-│       ├── settings/        # App configuration & preferences
-│       ├── timeline/        # Historical snapshots & drive scrubber
+│       ├── insights/        # Predictive analytics and storage alerts
+│       ├── onboarding/      # First-launch guided tour and permissions
+│       ├── settings/        # App configuration and preferences
+│       ├── timeline/        # Historical snapshots and drive scrubber
 │       ├── triage/          # Interactive swipe deck for fast triage
-│       ├── vault/           # 30-day recovery vault & restore manager
-│       ├── widget/          # Compact tray/menu bar widget
-│       └── wrapped/         # Storage Wrapped & Roast My Drive summary
+│       ├── vault/           # 30-day recovery vault and restore manager
+│       ├── widget/          # Compact tray and menu bar widget
+│       └── wrapped/         # Storage Wrapped summary
 ├── src-tauri/               # Tauri 2.0 Rust desktop backend
-├── static/                  # Static assets & public resources
-├── Orbit-PRD.md             # Complete Product Requirements Document
-└── package.json             # Dependencies and build scripts
+├── static/                  # Static assets and public resources
+├── Orbit-PRD.md             # Product Requirements Document
+└── package.json             # Dependencies and scripts
 ```
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18+ recommended)
-- [Rust](https://www.rust-lang.org/) (if running or building the native Tauri desktop app)
+- Node.js (v18 or newer recommended)
+- Rust and Cargo (required for building the Tauri desktop application)
 
 ### Installation
 
-1. **Clone the repository:**
+1. Clone the repository:
    ```bash
    git clone https://github.com/MarioSri/Orbit.git
    cd Orbit
    ```
 
-2. **Install dependencies:**
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Configure Environment Variables (Optional):**
+3. Configure Environment Variables (Optional):
    ```bash
    cp .env.example .env
    ```
-   Provide your Supabase URL and Anon Key if using cloud synchronization.
 
 ### Development
 
-Run the web frontend in dev mode:
+Start the development server:
 ```bash
 npm run dev
 ```
@@ -114,7 +103,7 @@ Run in Tauri Desktop mode:
 npm run tauri dev
 ```
 
-### Type Checking & Linting
+### Type Checking
 
 ```bash
 npm run check
@@ -128,14 +117,14 @@ npm run build
 
 ---
 
-## 🔒 Privacy First
+## Privacy Architecture
 
-Orbit is designed from the ground up to respect user privacy:
-- All disk scanning and indexing occurs directly on your machine.
-- File queries and content analysis run locally without sending telemetry or filenames to remote servers.
+Orbit is built with local-first privacy:
+- Disk scanning and indexing are processed locally on the device.
+- Storage queries and intelligence run on-device without transmitting file names or metadata to external servers.
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
